@@ -1,0 +1,35 @@
+body{
+    font-family: "MuseoModerno", sans-serif;
+}
+
+.navbar-nav{
+    font-size: 1.1rem;
+    justify-content: space-around;
+}
+
+.nav-item{
+    color: white;
+}
+
+.nav-item:hover {
+    color: gray;
+}
+
+
+.card-title {
+    margin-top: 2%;
+}
+
+.card-text{
+    font-size: 1.1rem;
+}
+
+.card-body {
+    width: 40%;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.card-title{
+    font-size: 3rem;
+}
