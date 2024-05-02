@@ -20,7 +20,9 @@
     <div class="card">
         <div class="card-body">
           <h5 class="card-title">Goals</h5>
-          <p style="margin-bottom: 2%;" class="card-text">We set out to program the Anki Cozmo robot to be able to localize itself rotationally using Monte Carlo localization. As such, we should be able to do the following: have the robot familiarize itself with its environment, including noting a specified “home location,” rotate it arbitrarily such that it is no longer facing the home position, and the robot should be able to rotate itself back to the home position after doing some sort of process to figure out where it is.</p>
+          <p style="margin-bottom: 2%;" class="card-text">
+            Our goal is to program the Anki Cozmo robot to navigate its environment and return to a designated "home location" regardless of its initial starting direction. We will achieve this by employing Sliding Window localization, a technique that utilizes sensor data and a recent history of robot movements to estimate its current position within a map it builds of its surroundings. After being rotated in any direction, the robot will leverage this information to determine its current location and utilize an internal process to navigate back to its designated home position.
+        </p>
         </div>
     </div>
     <div class="card-body">
