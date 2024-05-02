@@ -21,7 +21,7 @@
         <div class="card-body">
           <h5 class="card-title">Brief Overview of Our Work</h5>
           <p class="card-text">In this project, we write a program to help localize the Anki Cozmo robot rotationally. To do this, we first take many pictures of the robot's environment to help it "get its bearings." The first picture it takes denotes its "home position" Then, after a random rotation, either by external intervention or programmatically, the robot should be able to take pictures to try to figure out where it is. From this information, it should then rotate back to its home position.</p>
-          <p style="margin-bottom: 2%;" class="card-text">We apply Monte Carlo localization in the robot's attempt to find where it is. As such, we start with a randomly generated population of possible rotational positions. Then, based on the robot's movement and the image difference with its current location, it makes a new generation of possible positions, with emphasis on the locations that seem most likely, as determined by the image difference between the robot's current position and each of the possible positions.</p>
+          <p style="margin-bottom: 2%;" class="card-text">We leverage a classic approach for image recognition. Images are converted to a basic matrix format, allowing for direct comparison and efficient difference detection. Normalization ensures consistent results across various images. This simple approach prioritizes both speed and accuracy. </p>
         </div>
     </div>
     <div class="card-body">

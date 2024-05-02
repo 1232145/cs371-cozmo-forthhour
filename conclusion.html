@@ -20,7 +20,8 @@
     <div class="card ">
         <div class="card-body">
           <h5 class="card-title">Conclusion</h5>
-          <p style="margin-bottom: 2%;" class="card-text">We set out to program the Anki Cozmo robot to be able to localize itself rotationally using Monte Carlo localization. As such, we should be able to do the following: have the robot familiarize itself with its environment, including noting a specified “home location,” rotate it arbitrarily such that it is no longer facing the home position, and the robot should be able to rotate itself back to the home position after doing some sort of process to figure out where it is.</p>
+          <p style="margin-bottom: 2%;" class="card-text">This image recognition method prioritizes two key advantages. Firstly, it operates with relatively fast speed, making it well-suited for tasks requiring real-time analysis. Secondly, it demonstrates a high degree of accuracy when identifying familiar objects, ensuring reliable results.</p>
+          <p>Although generally accurate, the system may encounter difficulties with previously unseen objects.  In such instances, capturing the object from various perspectives or using additional images may be necessary for optimal recognition.</p>
         </div>
     </div>
     <div class="card-body">
@@ -28,7 +29,7 @@
         <div style="margin: 2rem 0 0 2rem;">
             <h3>It is possible that our approach would not be as successful in other environments. We suggest tuning some of the various parameters including:</h3>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">The size of the pose population</li>
+                <!-- <li class="list-group-item">The size of the pose population</li>
                 <li class="list-group-item">The number of pictures taken to get the robot’s bearings</li>
                 <li class="list-group-item">The distance between pictures taken during the localization processe</li>
                 <li class="list-group-item">The process for selecting a position given updated information after iterations of the localization process</li>
@@ -40,7 +41,7 @@
                 </li>
                 <li class="list-group-item">How image differences are turned into relative probabilities: We used an approach that multiplies the square differences of the reciprocals by the exponential of the squared differences divided by the sensor variance. Admittedly, we took this from the previous group without fully thinking about it since it seemed to work for our purposes. Maybe this could be made better by trying different approaches which might make the robot’s beliefs converge faster.</li>
                 <li class="list-group-item">In the sliding window process, the degree increments between each offset image. Currently, we shift it by 10 pixels each time. The endpoints of this process (-90px to 90px) could also be tuned to make our approach more efficient.</li>
-                <li class="list-group-item">Maybe our approach could be made faster by downscaling images. We did not experiment with this, but presumably, it could speed up the process if this was implemented. We do not know how this would affect the efficacy of our method.</li>
+                <li class="list-group-item">Maybe our approach could be made faster by downscaling images. We did not experiment with this, but presumably, it could speed up the process if this was implemented. We do not know how this would affect the efficacy of our method.</li> -->
             </ul>
         </div>
     </div>
