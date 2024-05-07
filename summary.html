@@ -1,58 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./rest.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=MuseoModerno&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
-    <nav class="navbar navbar-nav navbar-expand-lg navbar-dark bg-dark"  id="navbarNavAltMarkup">
-            <a class="nav-item nav-link" href="./index.html">Home</a>
-            <a class="nav-item nav-link" href="./goals.html">Goals and Setup</a>
-            <a class="nav-item nav-link active" href="./summary.html">Summary of work</a>
-            <a class="nav-item nav-link" href="./conclusion.html">Conclusion</a>
+    <nav class="navbar navbar-nav navbar-expand-lg navbar-dark bg-dark" id="navbarNavAltMarkup">
+        <a class="nav-item nav-link" href="./index.html">Home</a>
+        <a class="nav-item nav-link" href="./goals.html">Goals and Setup</a>
+        <a class="nav-item nav-link active" href="./summary.html">Summary of work</a>
+        <a class="nav-item nav-link" href="./conclusion.html">Conclusion</a>
     </nav>
     <div class="card ">
         <div class="card-body">
-          <h5 class="card-title">Brief Overview of Our Work</h5>
-          <p class="card-text">In this project, we write a program to help localize the Anki Cozmo robot rotationally. To do this, we first take many pictures of the robot's environment to help it "get its bearings." The first picture it takes denotes its "home position" Then, after a random rotation, either by external intervention or programmatically, the robot should be able to take pictures to try to figure out where it is. From this information, it should then rotate back to its home position.</p>
-          <p style="margin-bottom: 2%;" class="card-text">We leverage a classic approach for image recognition. Images are converted to a basic matrix format, allowing for direct comparison and efficient difference detection. Normalization ensures consistent results across various images. This simple approach prioritizes both speed and accuracy. </p>
+            <h5 class="card-title">Brief Overview of Our Work</h5>
+            <p class="card-text">In this project, we write a program to help localize the Anki Cozmo robot rotationally.
+                To do this, we first take many pictures of the robot's environment to help it "get its bearings." The
+                first picture it takes denotes its "home position" Then, after a random rotation, either by external
+                intervention or programmatically, the robot should be able to take pictures to try to figure out where
+                it is. From this information, it should then rotate back to its home position.</p>
+            <p style="margin-bottom: 2%;" class="card-text">We leverage a classic approach for image recognition. Images
+                are converted to a basic matrix format, allowing for direct comparison and efficient difference
+                detection. Normalization ensures consistent results across various images. This simple approach
+                prioritizes both speed and accuracy. </p>
         </div>
     </div>
     <div class="card-body">
         <h5 class="card-title">Our Code and How to Use It</h5>
         <div style="margin: 2rem 0 0 2rem;">
-            <ul class="list-group list-group-flush"> We have our code available here for direct download as python files such that they can be viewed in the browser:
-                <li class="list-group-item">ImageGathering.py</li>
-                <li class="list-group-item">SlidingWindowLocalize.py</li>
+            <ul class="list-group list-group-flush"> We have our code available here for direct download as python files
+                such that they can be viewed in the browser:
+                <li class="list-group-item"><a href="./ImageGathering.py" target="_blank">ImageGathering.py</a></li>
+                <li class="list-group-item"><a href="./SlidingWindowLocalize.py"
+                        target="_blank">SlidingWindowLocalize.py</a></li>
             </ul>
         </div>
-        <div style="margin: 1rem 0 0 2rem;">
+        <!-- <div style="margin: 1rem 0 0 2rem;">
             <ul class="list-group list-group-flush"> However, we recommend getting the jupyter notebook versions. They can be accessed via:
                 <li class="list-group-item">ImageGathering.ipynb</li>
                 <li class="list-group-item">SlidingWindowLocalize.py</li>
             </ul>
-        </div>
+        </div> -->
     </div>
     <div class="card-body">
         <div style="margin: 0 0 0 2rem;">
             <h3>Image Gathering</h3>
             <br>
-            <p>One should first run the ImageGathering.ipynb which creates an images/ directory and populates it with images. Note that you need to update the parent_dir variable in the second code block of this file to reflect the actual file path on your computer. After this, this file can be run from top to bottom as a whole. As stated before, the first image taken becomes the robot's home location, so place the robot according to which direction you want to be the home position.</p>
+            <p>One should first run the ImageGathering.ipynb which creates an images/ directory and populates it with
+                images. Note that you need to update the parent_dir variable in the second code block of this file to
+                reflect the actual file path on your computer. After this, this file can be run from top to bottom as a
+                whole. As stated before, the first image taken becomes the robot's home location, so place the robot
+                according to which direction you want to be the home position.</p>
         </div>
     </div>
     <div class="card-body">
         <div style="margin: 0 0 0 2rem;">
             <h3>Sliding Window Localize</h3>
             <br>
-            <p>After the images/ folder is populated, one can now run the contents of SlidingWindowLocalize.ipynb. Note that this file contains a programmatic random rotation of the robot for testing purposes, but is commented out to allow for manual random rotations of the robot. In its current state, the robot will wait for the user to rotate it, then it will start the localization process.</p>
-            <p>As the robot continues to iterate, this file will print out histograms to the Jupyter Notebook output showing the robot's beliefs about where it is currently facing, which can be useful in seeing the robot zero in on its actual location. These histograms simply show how many locations in the current population are in each "bin."</p>
+            <p>After the images/ folder is populated, one can now run the contents of SlidingWindowLocalize.ipynb. Note
+                that this file contains a programmatic random rotation of the robot for testing purposes, but is
+                commented out to allow for manual random rotations of the robot. In its current state, the robot will
+                wait for the user to rotate it, then it will start the localization process.</p>
+            <p>As the robot continues to iterate, this file will print out histograms to the Jupyter Notebook output
+                showing the robot's beliefs about where it is currently facing, which can be useful in seeing the robot
+                zero in on its actual location. These histograms simply show how many locations in the current
+                population are in each "bin."</p>
         </div>
     </div>
+    <div class="card-body">
+        <h5 class="card-title">Our meetings and work schedule</h5>
+        <p class="card-text">https://docs.google.com/spreadsheets/d/16hWd--q_TN8lJuDIef9HLJhNWOB7bDXDOw6YlULKtf4/edit?usp=drivesdk</p>
+    </div>
 </body>
+
 </html>
